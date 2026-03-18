@@ -9,15 +9,15 @@ The goal is to understand how AWS handles **high-performance, low-latency traffi
 ---
 
 ## Architecture
-    Client Traffic
-          |
-          v
+Client Traffic
+|
+v
 +----------------------+
 | Network Load Balancer|
-+---------+------------+
-          |
-          |    
-         | |
++----------+-----------+
+|
+
+| |
 +--------+ +--------+
 | EC2 #1 | | EC2 #2 |
 +--------+ +--------+
