@@ -9,9 +9,8 @@ The goal is to understand how AWS handles **high-performance, low-latency traffi
 ---
 
 ## Architecture
-## 🏗️ Architecture
 
-```text
+
                     Internet
                         |
                         v
