@@ -9,18 +9,29 @@ The goal is to understand how AWS handles **high-performance, low-latency traffi
 ---
 
 ## Architecture
-Client Traffic
-|
-v
-+----------------------+
-| Network Load Balancer|
-+----------+-----------+
-|
+## 🏗️ Architecture
 
-| |
-+--------+ +--------+
-| EC2 #1 | | EC2 #2 |
-+--------+ +--------+
+```text
+                    Internet
+                        |
+                        v
+             +------------------------+
+             |  Network Load Balancer |
+             |         (NLB)          |
+             +-----------+------------+
+                         |
+              -------------------------
+              |                       |
+              v                       v
+      +---------------+       +---------------+
+      |   EC2 Instance |       |   EC2 Instance |
+      |    Target 1    |       |    Target 2    |
+      +---------------+       +---------------+
+              |                       |
+              -------------------------
+                         |
+                         v
+                    Target Group
 
 
 ---
